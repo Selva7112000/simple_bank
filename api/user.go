@@ -101,7 +101,7 @@ func (server *Server) loginUser(ctx *gin.Context) {
 		return
 	}
 
-	_ = util.CheckPassword(req.Password, user.HashedPassword)
+	err = util.CheckPassword(req.Password, user.HashedPassword)
 	if err != nil {
 		ctx.JSON(http.StatusUnauthorized, errorResponse(err))
 		return
