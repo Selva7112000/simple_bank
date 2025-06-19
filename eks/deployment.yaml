@@ -19,6 +19,4 @@ spec:
           image: 982009233494.dkr.ecr.ap-south-1.amazonaws.com/simplebank:e8d1e9c01e4584a800051fac9e6282e894c7442d
           ports:
             - containerPort: 8080
-          env:
-            - name: DB_SOURCE
-              value: "postgresql://root:0ygwJz0tcM0Y9NLJBGcR@simple-bank.crycwas0iksy.ap-south-1.rds.amazonaws.com:5432/simple_bank"
+          
